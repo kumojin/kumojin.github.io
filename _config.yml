@@ -10,9 +10,8 @@ url: https://kumojin.github.io
 
 # Site configuration
 title: Kumojin
-description: >-
-  Dev tips from the Kumojin team.
+description: Blog
 
 # minima configuration
-github_username:  kumojin
 show_excerpts: true
+rss_feed: false
