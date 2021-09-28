@@ -8,9 +8,10 @@ plugins:
 domain: kumojin.github.io
 url: https://kumojin.github.io
 
+# Site configuration
+title: Kumojin
+description: Blog
+
 # minima configuration
-title: Kumojin Blog
-description: >-
-  Dev tips from the Kumojin team.
-github_username:  kumojin
 show_excerpts: true
+rss_feed: false

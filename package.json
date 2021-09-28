@@ -1,0 +1,20 @@
+{
+  "name": "kumojin.github.io",
+  "version": "1.0.0",
+  "description": "Kumojin Blog",
+  "scripts": {
+    "lint": "markdownlint _posts/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumojin/kumojin.github.io.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kumojin/kumojin.github.io/issues"
+  },
+  "homepage": "https://github.com/kumojin/kumojin.github.io#readme",
+  "dependencies": {
+    "markdownlint": "0.24.0"
+  }
+}
