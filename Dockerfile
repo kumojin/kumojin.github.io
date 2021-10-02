@@ -1,5 +1,5 @@
 FROM ruby:2.7.4
-RUN apt-get update && apt-get install -y nodejs
+RUN apt-get update
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile Gemfile
