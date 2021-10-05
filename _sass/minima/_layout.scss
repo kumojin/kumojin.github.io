@@ -203,6 +203,19 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+
+  .tags {
+    display: flex;
+    align-content: space-between;
+    gap: 5px;
+    
+    .tag {
+      background: $grey-color;
+      border-radius: 5px;
+      color: white;
+      padding: 0px 5px 0px 5px;
+    }
+  }
 }
 
 .post-link {

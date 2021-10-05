@@ -2,6 +2,10 @@
 layout: post
 title:  "How to use Redux-Saga effects within a callback"
 author: "Xavier Balloy"
+tags: 
+  - javascript
+  - react 
+  - saga
 ---
 Because you can only add a `yield` expression in a generator body it can be tricky
 to use a callback-based library in your saga (a generator function).
