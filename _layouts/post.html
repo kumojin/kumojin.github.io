@@ -18,7 +18,7 @@ layout: default
       {%- if page.tags -%}
         <span class="tags">
           {%- for tag in page.tags -%}
-            <span class="tag" itemprop="name">{{ tag | replace '["', '' }}</span>
+            <span class="tag" itemprop="name">{{ tag }}</span>
           {%- endfor -%}
         </span>
       {%- endif -%}</p>
