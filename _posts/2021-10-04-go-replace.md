@@ -9,7 +9,7 @@ tags:
 Suddenly, your CI pipeline starts failing because the dependency checker step
 fails on a [CVE](https://cve.mitre.org/index.html) being detected in a
 derived package used by one of your dependencies. Is there a way in Go to
-change theversion of the derived package ?
+change the version of the derived package ?
 
 <!--more-->
 Here's how a `go.mod` file usually looks like:
