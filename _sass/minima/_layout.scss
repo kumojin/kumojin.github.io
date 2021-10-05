@@ -144,6 +144,12 @@
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width:         calc(45% - (#{$spacing-unit} / 2));
+
+  .title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 @include media-query($on-laptop) {
@@ -197,6 +203,19 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+
+  .tags {
+    display: flex;
+    align-content: space-between;
+    gap: 5px;
+    
+    .tag {
+      background: $grey-color;
+      border-radius: 5px;
+      color: white;
+      padding: 0px 5px 0px 5px;
+    }
+  }
 }
 
 .post-link {
