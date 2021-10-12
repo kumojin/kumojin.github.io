@@ -7,18 +7,23 @@ tags:
   - websocket 
   - socket.io
 ---
-What you will learn? Use [Artillery](https://artillery.io) to make a performance test on a socket.io v3+ server
-<!-- more -->
-Because a websocket server doesn't act like an HTTP server, it's hardest to create a test sequence. But, Artillery give all the tooling we need!
+What you will learn? Use [Artillery](https://artillery.io) to make a
+performance test on a socket.io v3+ server.
+<!--more-->
+Because a WebSocket server doesn't act like an HTTP server, it's harder to
+create a test sequence. But, Artillery provides all the tooling we need!
 
 ## Install Artillery
-Artillery is a nodejs application and could be installed with npm:
-```
-npm install -g artillery@latest
+
+Artillery is a Node.js application and can be installed with npm:
+
+```sh
+npm install -g artillery
 ```
 
-Add the websocket v3+ engine:
-```
+Add the WebSocket v3+ engine:
+
+```sh
 npm install -g artillery-engine-socketio-v3
 ```
 
@@ -46,12 +51,14 @@ scenarios:
 ```
 
 ### Run your test
-```
+
+```sh
 artillery run myscenario.yml
 ```
 
-And that all!
-```
+And that's all!
+
+```text
 All virtual users finished
 Summary report @ 02:18:36(+0000) 2021-10-12
   Scenarios launched:  1304
