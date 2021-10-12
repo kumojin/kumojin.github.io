@@ -9,7 +9,7 @@ tags:
 Suddenly, your CI pipeline starts failing because the dependency checker step
 fails on a [CVE](https://cve.mitre.org/index.html) being detected in a
 derived package used by one of your dependencies. Is there a way in Go to
-change theversion of the derived package ?
+change theversion of the derived package?
 
 <!--more-->
 Here's how a `go.mod` file usually looks like:
@@ -25,7 +25,7 @@ require (
 ```
 
 Now, let's imagine that `go-funk` depends on a `go-funk-dep` package. We would
-basically have a `go.sum` file like that:
+have a `go.sum` file like that:
 
 ```text
 github.com/thoas/go-funk v0.9.0 h1:Yzu8aTjTb1sqHZzSZLBt4qaZrFfjNizhA7IfnefjEzo=
