@@ -7,7 +7,7 @@ tags:
   - vuejs
 ---
 You install `Vue3` and you decide to use the `composable` and the `composition api`
-to be faster and keep good practice, but something seems wrong and the destructured
+to be faster and follow good practice, but something seems wrong and the destructured
 constant from the composable doesn't update when your props update? I got you!
 <!--more-->
 
@@ -75,22 +75,22 @@ const { isSelectedOption } = useDropDown(props);
 ```
 
 Everything seems good and it should work, right?
-We use reactive props and a computed for a composable, so why the value
-of isSelectedOption never changes?
+We use reactive props and a computed for a composable, so why does the value
+of `isSelectedOption` never change?
 
 Here's the answer: **The lifecycle hook**
 
 The setup (composition api) is run before everything.
 It takes the place of the `beforeCreated`/`Created` since they don't exist anymore.
 So, what happens here is that the code is run on the created and never passes
-in the composable anymore because the prop changes don't re-renders the composable.
-Then the isSelectedOption keep its initial value.
+in the composable anymore because the prop changes don't re-render the composable.
+Hence `isSelectedOption` keeping its initial value.
 
 To keep this reactivity going, we will need to add something to watch the prop
-and update the isSelectedOption.
+and update `isSelectedOption`.
 
-You should NOT use onUpdated in this case because if you do,
-you update the isSelectedOption in it and it calls an update so it rerender...
+You should NOT use `onUpdated` in this case because if you do,
+you update `isSelectedOption` in it and it calls an update so it re-renders...
 you see where I'm going: **Infinite loop**.
 
 The solution is to add a `watch`. There is also another problem.
@@ -126,5 +126,5 @@ watch(() => props.selectedOption, (value) => {
 </script>
 ```
 
-Now, we can use selectedOptionArray instead of the isSelectedOption
-and have reactivity to the infinite and beyond!
+Now, we can use `selectedOptionArray` instead of `isSelectedOption`
+and have reactivity to the infinite and beyond! 🚀
