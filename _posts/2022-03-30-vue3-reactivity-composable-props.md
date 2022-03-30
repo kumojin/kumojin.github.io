@@ -84,7 +84,7 @@ The setup (composition api) is run before everything.
 It takes the place of the `beforeCreated`/`Created` since they don't exist anymore.
 So, what happens here is that the code is run on the created and never passes
 in the composable anymore because the prop changes don't re-renders the composable.
-Then the isSelectOption keep its initial value.
+Then the isSelectedOption keep its initial value.
 
 To keep this reactivity going, we will need to add something to watch the prop
 and update the isSelectedOption.
