@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to keep reactivity with a composable and a props in Vue3"
+title:  "How to keep reactivity with a composable and a prop in Vue3"
 author: "Camélie Groleau"
 tags: 
   - javascript
@@ -81,12 +81,12 @@ of isSelectedOption never changes?
 Here's the answer: **The lifecycle hook**
 
 The setup (composition api) is run before everything.
-It takes the place of the `beforeCreated`/`Created` since they didn't exist anymore.
-So, what happens here is that the code is run on the created and never pass
-in the composable anymore because the props changes doesn't rerender the composable.
-Then the isSelectOption keep is initial value.
+It takes the place of the `beforeCreated`/`Created` since they don't exist anymore.
+So, what happens here is that the code is run on the created and never passes
+in the composable anymore because the prop changes don't re-renders the composable.
+Then the isSelectOption keep its initial value.
 
-To keep this reactivity going, we will need to add something to watch the props
+To keep this reactivity going, we will need to add something to watch the prop
 and update the isSelectedOption.
 
 You should NOT use onUpdated in this case because if you do,
@@ -96,7 +96,7 @@ you see where I'm going: **Infinite loop**.
 The solution is to add a `watch`. There is also another problem.
 The destructured element doesn't go out of the watch. We need a new variable
 to manage the value with the reactivity we want. I also add a ref,
-just to be sure the reactivity is at his maximum!
+just to be sure the reactivity is at its maximum!
 
 ```vuejs
 <script setup>
