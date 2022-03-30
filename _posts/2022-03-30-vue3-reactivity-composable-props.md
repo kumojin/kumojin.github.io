@@ -9,7 +9,7 @@ tags:
 You install `Vue3` and you decide to use the `composable` and the `composition api` to be faster and keep good practice, 
 but something seems wrong and the destructured constant from the composable doesn't update when
 your props update? I got you!
-
+<!--more-->
 Here is a simple example of the problem:
 
 **Composable**
