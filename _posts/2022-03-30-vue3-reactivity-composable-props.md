@@ -8,7 +8,7 @@ tags:
 ---
 You install `Vue3` and you decide to use the `composable` and the `composition api`
 to be faster and follow good practice, but something seems wrong and the destructured
-constant from the composable doesn't update when your props update? I got you!
+constant from the composable doesn't update when your prop update? I got you!
 <!--more-->
 
 Here is a simple example of the problem:
@@ -40,9 +40,7 @@ export const useDropDown = (props) => {
     <div
       :class="{ 'selected-option': isSelectedOption[idx] }"
     >
-      <div v-if="!!option.name">
-        {{ option.name }}
-      </div>
+      <div v-if="!!option.name" v-html="option.name"/>
 
       <div v-html="option.address" />
     </div>
@@ -56,6 +54,7 @@ export const useDropDown = (props) => {
 </template>
 
 <script setup>
+import { useDropDown } from '@/composables/dropdown-modal';
 import AppIcon from '@/components/app/AppIcon';
 
 const emit = defineEmits(['on-select']);
@@ -101,6 +100,7 @@ just to be sure the reactivity is at its maximum!
 ```vuejs
 <script setup>
 import { computed, ref, watch } from 'vue';
+import { useDropDown } from '@/composables/dropdown-modal';
 
 import AppIcon from '@/components/app/AppIcon';
 
