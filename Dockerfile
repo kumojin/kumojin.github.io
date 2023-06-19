@@ -1,4 +1,4 @@
-FROM ruby:2.7.4
+FROM ruby:2.7.8
 WORKDIR /app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
