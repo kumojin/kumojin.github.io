@@ -13,8 +13,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
 
-      - name: Install dependencies
+      - name: Set up Node
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install Node.js dependencies
         run: npm ci
 
       - name: Check lint
         run: npm run lint
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@0cde4689ba33c09f1b890c1725572ad96751a3fc # v1.178.0
+        with:
+          ruby-version: '.ruby-version'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
