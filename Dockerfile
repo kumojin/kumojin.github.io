@@ -1,4 +1,4 @@
-FROM ruby:3.4.4@sha256:4cf7641c6354e8f407afd2dbb0ab1968cd44ac443bd833c16bdf55cc074a3eb8
+FROM ruby:3.4.4@sha256:9e5cc680667deb73b3a6bcbf0807a89a645da620febe665b8cb925f122139394
 WORKDIR /app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
